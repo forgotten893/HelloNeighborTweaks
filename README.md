@@ -3,6 +3,9 @@
 A graphics mod for **Hello Neighbor** (PC, Unreal Engine 4.20, 64-bit Windows). It adds real-time lighting and
 shadows, reflections, ambient occlusion, volumetric fog and an in-game settings menu, without changing any game files.
 
+The mod keeps to the game's original artistic style as closely as possible. The colours, mood and cartoon look stay
+the same; only the lighting, shadows and reflections get better.
+
 Version 1.0.0 by forgotten893. MIT License. The full source code is included.
 
 **AI-assisted coding.** The code was written with an AI assistant (Claude by Anthropic). All in-game testing was

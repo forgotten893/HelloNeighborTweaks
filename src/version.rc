@@ -1,0 +1,30 @@
+// Version resource for XINPUT1_3.dll (shown in the file's Properties > Details)
+#include <winver.h>
+#include "version.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION HNT_VERSION_NUM
+ PRODUCTVERSION HNT_VERSION_NUM
+ FILEFLAGSMASK 0x3fL
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "forgotten893"
+            VALUE "FileDescription", "Hello Neighbor Tweaks (XInput 1.3 proxy)"
+            VALUE "FileVersion", HNT_VERSION
+            VALUE "InternalName", "XINPUT1_3"
+            VALUE "LegalCopyright", "Copyright (c) 2026 forgotten893. MIT License."
+            VALUE "OriginalFilename", "XINPUT1_3.dll"
+            VALUE "ProductName", "Hello Neighbor Tweaks"
+            VALUE "ProductVersion", HNT_VERSION
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

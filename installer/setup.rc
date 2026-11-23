@@ -1,0 +1,55 @@
+// Hello Neighbor Tweaks installer resources. The payload files are produced by build_release.bat in dist\obj.
+#include <windows.h>
+#include "resource.h"
+#include "..\src\version.h"
+
+1 24 "setup.manifest"
+
+IDR_DLL     RCDATA "..\\dist\\obj\\XINPUT1_3.dll"
+IDR_README  RCDATA "..\\dist\\obj\\README-installer.txt"
+IDR_LICENSE RCDATA "..\\LICENSE"
+IDR_SOURCE  RCDATA "..\\dist\\obj\\source.zip"
+
+IDD_MAIN DIALOGEX 0, 0, 330, 178
+STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "Hello Neighbor Tweaks Setup"
+FONT 9, "Segoe UI", 400, 0, 1
+BEGIN
+    LTEXT           "Real-time lighting and shadows, reflections, ambient occlusion, volumetric fog and an in-game settings menu (F1) for Hello Neighbor.",
+                    IDC_INTRO, 10, 8, 310, 18
+    LTEXT           "Hello Neighbor folder:", -1, 10, 32, 200, 9
+    COMBOBOX        IDC_PATH, 10, 43, 252, 120, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Browse...", IDC_BROWSE, 268, 42, 52, 15
+    LTEXT           "", IDC_STATUS, 10, 64, 310, 78
+    PUSHBUTTON      "Read me", IDC_README, 10, 154, 56, 15
+    DEFPUSHBUTTON   "Install", IDC_INSTALL, 152, 154, 54, 15
+    PUSHBUTTON      "Uninstall", IDC_UNINSTALL, 210, 154, 54, 15
+    PUSHBUTTON      "Close", IDCANCEL, 268, 154, 52, 15
+END
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION HNT_VERSION_NUM
+ PRODUCTVERSION HNT_VERSION_NUM
+ FILEFLAGSMASK 0x3fL
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "forgotten893"
+            VALUE "FileDescription", "Hello Neighbor Tweaks Setup"
+            VALUE "FileVersion", HNT_VERSION
+            VALUE "InternalName", "HelloNeighborTweaks-Setup"
+            VALUE "LegalCopyright", "Copyright (c) 2026 forgotten893. MIT License."
+            VALUE "OriginalFilename", "HelloNeighborTweaks-Setup.exe"
+            VALUE "ProductName", "Hello Neighbor Tweaks"
+            VALUE "ProductVersion", HNT_VERSION
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
